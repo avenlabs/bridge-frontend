@@ -1,0 +1,33 @@
+{
+  "name": "Mainnet",
+  "timestamp": "2022-11-21T14:04:21.015Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "/tokenlist/cyba_logo.png",
+  "keywords": [
+    "cyba",
+    "wcyba"
+  ],
+  "tokens": [
+    {
+      "name": "Wrapped Cybria",
+      "address": "0x95622Fce49d65D1101f6FDa8b6325459A6188E52",
+      "symbol": "WCYBA",
+      "decimals": 18,
+      "chainId": 6661,
+      "logoURI": "local:/tokenlist/cyba_logo.png"
+    },
+    {
+      "name": "CYBRIA from ETH",
+      "address": "0xcf45D7A9C47e3D42Fdef27eaab0dc34ec7239Cc0",
+      "symbol": "CYBA",
+      "decimals": 9,
+      "chainId": 6661,
+      "logoURI": "local:/tokenlist/CYBA.svg"
+    }
+  ]
+}

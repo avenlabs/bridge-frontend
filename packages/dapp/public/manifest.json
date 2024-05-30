@@ -1,0 +1,23 @@
+{
+  "short_name": "CYBA Bridge",
+  "name": "CYBA Bridge",
+  "description": "The CYBA Bridge is the simplest way to transfer ANY CYBA20/CYBA677/CYBA827 token to and from the xDai chain.",
+  "iconPath": "android-chrome-512x512.png",
+  "providedBy": { "name": "CYBABridge", "url": "https://bridge.cybria.io/" },
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#EEF4FD",
+  "background_color": "#EEF4FD"
+}

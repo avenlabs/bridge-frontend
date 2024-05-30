@@ -1,0 +1,37 @@
+{
+  "name": "@omnibridge/subgraph",
+  "version": "1.0.0",
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.21.1",
+    "@graphprotocol/graph-ts": "^0.20.1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "auth": "graph auth https://graph.cybaswap.io/deploy/ $GRAPH_ACCESS_TOKEN",
+    "prepare-bsc-cyba": "mustache config/bsc-cyba.json subgraph.template.yaml > subgraph.yaml",
+    "prepare-cyba-bsc": "mustache config/cyba-bsc.json subgraph.template.yaml > subgraph.yaml",
+    "prepare-eth-cyba": "mustache config/eth-cyba.json subgraph.template.yaml > subgraph.yaml",
+    "prepare-cyba-eth": "mustache config/cyba-eth.json subgraph.template.yaml > subgraph.yaml",
+    "codegen": "graph codegen --output-dir src/types/",
+    "build": "graph build",
+    "create-bsc-cyba": "graph create bsc/bsc-to-cyba-omnibridge --node http://127.0.0.1:8020",
+    "create-cyba-bsc": "graph create cyba/cyba-to-bsc-omnibridge --node http://127.0.0.1:8020",
+    "deploy-bsc-cyba": "graph deploy bsc/bsc-to-cyba-omnibridge --ipfs http://localhost:5001/ --node http://127.0.0.1:8020/",
+    "deploy-cyba-bsc": "graph deploy cyba/cyba-to-bsc-omnibridge --ipfs http://localhost:5001/ --node http://127.0.0.1:8020/",
+    "remove-bsc-cyba": "graph remove bsc/bsc-to-cyba-omnibridge --node http://127.0.0.1:8020",
+    "remove-cyba-bsc": "graph remove cyba/cyba-to-bsc-omnibridge --node http://127.0.0.1:8020",
+    "deployfull-bsc-cyba":"yarn prepare-bsc-cyba && yarn codegen && yarn build && yarn create-bsc-cyba && yarn deploy-bsc-cyba",
+    "deployfull-cyba-bsc":"yarn prepare-cyba-bsc && yarn codegen && yarn build && yarn create-cyba-bsc && yarn deploy-cyba-bsc",
+    "create-eth-cyba": "graph create eth/eth-to-cyba-omnibridge --node http://127.0.0.1:8020",
+    "create-cyba-eth": "graph create cyba/cyba-to-eth-omnibridge --node http://127.0.0.1:8020",
+    "deploy-eth-cyba": "graph deploy eth/eth-to-cyba-omnibridge --ipfs http://localhost:5001/ --node http://127.0.0.1:8020/",
+    "deploy-cyba-eth": "graph deploy cyba/cyba-to-eth-omnibridge --ipfs http://localhost:5001/ --node http://127.0.0.1:8020/",
+    "remove-eth-cyba": "graph remove eth/eth-to-cyba-omnibridge --node http://127.0.0.1:8020",
+    "remove-cyba-eth": "graph remove cyba/cyba-to-eth-omnibridge --node http://127.0.0.1:8020",
+    "deployfull-eth-cyba":"yarn prepare-eth-cyba && yarn codegen && yarn build && yarn create-eth-cyba && yarn deploy-eth-cyba",
+    "deployfull-cyba-eth":"yarn prepare-cyba-eth && yarn codegen && yarn build && yarn create-cyba-eth && yarn deploy-cyba-eth"
+  },
+  "devDependencies": {
+    "mustache": "^4.2.0"
+  }
+}

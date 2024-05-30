@@ -1,0 +1,48 @@
+{
+  "name": "Ethereum Mainnet",
+  "timestamp": "2022-11-21T14:04:21.015Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "/tokenlist/eth.png",
+  "keywords": [
+    "eth"
+  ],
+  "tokens": [
+    {
+      "name": "Wrapped ETH",
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "symbol": "WETH",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://etherscan.io/token/images/weth_28.png"
+    },
+    {
+      "name": "CYBRIA",
+      "address": "0x1063181dc986F76F7eA2Dd109e16fc596d0f522A",
+      "symbol": "CYBA",
+      "decimals": 9,
+      "chainId": 1,
+      "logoURI": "local:/tokenlist/cyba_logo.png"
+    },
+    {
+      "name": "Tether USD",
+      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "symbol": "USDT",
+      "decimals": 6,
+      "chainId": 1,
+      "logoURI": "https://etherscan.io/token/images/tethernew_32.png"
+    },
+    {
+      "name": "Wrapped Cybria from CYBA",
+      "address": "0x454112b972176Caa0be90BC9C5e842B4cA6E7457",
+      "symbol": "WCYBA",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "local:/tokenlist/cyba_logo.png"
+    }
+  ]
+}
